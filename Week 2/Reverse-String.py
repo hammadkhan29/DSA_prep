@@ -10,4 +10,15 @@ def reverseString(self, s: List[str]) -> None:
 
         #Direct using built in method
         #s.reverse()
+        left, right = 0, len(s) - 1
 
+    # Swap characters from the beginning and end until the pointers meet
+        while left < right:
+        # Swap characters
+            s[left], s[right] = s[right], s[left]
+
+        # Move pointers towards the center
+            left += 1
+            right -= 1
+        print(s)
+#Time complexity is O(n)
